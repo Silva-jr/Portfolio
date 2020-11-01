@@ -1,0 +1,395 @@
+//Importando fonte 'Poppins' do Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+//Importando arquivos Scss
+@import "./constants.scss";
+@import "./zero_config.scss";
+@import "./nav_menu.scss";
+@import "./dark_mode.scss";
+
+//Header | Home
+header {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 150px;
+  overflow: hidden;
+  @media screen and (max-width:1000px){
+    padding: 75px;
+  }
+  #apresentacaoTexto {
+    width: $tamanhoArticlesMaior;
+    padding-right: 25px;
+    flex-direction: column;
+
+    @media screen and (max-width:1000px){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      padding-right: 0px;
+    }
+    h2 {
+      font: {
+        size: 16px;
+        weight: 400;
+        line-height: 150%;
+        color: rgb(56, 56, 56);
+      }
+      #nome {
+        text-transform: uppercase;
+        font: {
+          size: 2.5rem;
+          weight: 900;
+        }
+      }
+      #profissao{
+        font-size: 1.06rem;
+        text-transform: uppercase;
+      }
+    }
+    button {
+      @include botao;
+    }
+    .midiasSociais {
+      width: 150px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 75px;
+      color: $corSegundaria;
+      i {
+        font: {
+          size: 24px;
+        }
+        &:hover {
+          cursor: pointer;
+          color: $hoverSegundaria;
+        }
+      }
+      @media screen and (max-width:1000px){
+        padding: 40px 0px;
+        margin: 0 auto;
+      }
+    }
+  }
+  #apresentacaoFoto {
+    width: $tamanhoArticlesMenor;
+    transform: scaleX(-1);
+    position: relative;
+    img{
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+    }
+    @media screen and (max-width:1000px){
+      display: none;
+    }
+  }
+}
+
+//Main | Sections > Sobre mim > Projetos > Serviços > Conhecimentos
+main {
+  //Sobre
+  #sobre {
+    padding: $espacamentoLaterais;
+    background-color: #fafafa;
+    @media screen and (max-width:1000px){
+      padding: 70px 20px;
+    }
+    #sobreMim {
+      display: flex;
+      padding: 25px 0px;
+      align-items: center;
+    }
+    #sobreFoto {
+      width: $tamanhoArticlesMenor;
+      @media screen and (max-width:1000px){
+        display: none;
+      }
+    }
+    #sobreTexto {
+      width: $tamanhoArticlesMaior;
+      padding-left: 25px;
+      @media screen and (max-width:1000px){
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0px;
+        text-align: center;
+           color: $corSegundaria;
+      }
+      h3 {
+        padding-bottom: 20px;
+        font: {
+          size: 30px;
+        }
+      }
+      p {
+        line-height: 30px;
+      }
+    }
+    button {
+      @include botao();
+    }
+  }
+  
+  //Projetos
+  #projetos {
+    padding:70px;
+    h2 {
+      @include alinhamentoTitulo();
+    }
+    article {
+      padding: 25px 0px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      text-align: left;
+      div {
+        height: 250px;
+        flex-grow: 1;
+        flex-basis: 300px;
+        background-color: #fafafa;
+        padding: 40px;
+        margin: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgb(202, 202, 202);
+        position: relative;
+        h3{
+          font-size: 1.4rem;
+        }
+        p{
+          padding: 10px 0px;
+          font-size: 0.9rem;
+        }
+        .botoes-projetos{
+          position: absolute;
+          bottom: 40px;
+          left: 40px;
+        }
+        a{
+          margin-right: 10px;
+        }
+        .aovivo-button{
+          background-color: $corPrincipal;
+          padding: 10px 20px;
+          color:#fff;
+          border:0;
+          font-weight: 500;
+          font-size: 14px;
+          border-radius: 5px;
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+        .github-button{
+          width: 35px;
+          height: 35px;
+          font-size: 20px;
+          border-radius: 50%;
+          background-color: $corPrincipal;
+          color:#fff;
+          border:0;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+    }
+    //reponsividade no flexbox
+    @media screen and (max-width:800px){
+        padding: 70px 10px;
+    }
+  }
+
+  //Serviços
+  #servicos {
+    background-color: #fafafa;
+    padding: 70px;
+    h2 {
+       @include alinhamentoTitulo();
+    }
+    article {
+      display: flex;
+      height: auto;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    div {
+      text-align: center;
+      height: auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      margin: 10px;
+      flex-basis: 250px;
+      flex-grow: 1;
+      box-shadow: 0px 0px 20px rgb(231, 231, 231);
+      h2{
+        font-size: 20px;
+        padding: 20px 0px;
+      }
+      p {
+        line-height: 30px;
+      }
+    }
+    //reponsividade no flexbox
+    @media screen and (max-width:800px){
+        padding: 70px 10px;
+    }
+  }
+  .imageIcone {
+    width: 50px;
+  }
+  //Conhecimentos
+  #meusConhecimentos {
+    width: 100%;
+    padding: 70px;
+    overflow: hidden;
+    h2{
+      @include alinhamentoTitulo();
+    }
+    div {
+      display: flex;
+      height: auto;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+    article {
+      text-align: center;
+      height: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      margin: 10px;
+      flex-basis: 250px;
+      flex-grow: 1;
+      box-shadow: 0px 0px 20px rgb(231, 231, 231);
+      transition: all 0.5s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+      h2 {
+        padding: 10px 0px;
+        font-size: 20px;
+      }
+      p {
+        line-height: 30px;
+      }
+    }
+    //reponsividade no flexbox
+    @media screen and (max-width:800px){
+        padding: 70px 10px;
+    }
+    //Nivel de conhecimento(estrelas)
+    .estrelaConhecimento {
+      background: url("../image/star.png") repeat-x;
+      font-size: 0;
+      height: 21px;
+      line-height: 0;
+      overflow: hidden;
+      text-indent: -999em;
+      width: 110px;
+      margin: 10px auto;
+    }
+    .nivelConhecimento {
+      background: url("../image/star.png") repeat-x;
+      background-position: 0 100%;
+      float: left;
+      height: 21px;
+      display: block;
+   }
+  }
+}
+
+// Scroll
+.scrollTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: $corPrincipal;
+  padding: 14px;
+  opacity: 0;
+  transition: all 0.4s ease-in-out 0s;
+  cursor: pointer;
+  border-radius: 10%;
+  i {
+    font-size: 20px;
+    color: #fff;
+  }
+}
+//Fim do Main
+
+//Footer | Rodapé
+footer {
+  padding: 50px 10px;
+  background-color: $corSegundaria;
+  text-align: center;
+  p {
+    color: #fff;
+    padding: 25px;
+    font: {
+      size: 14px;
+      weight: 200;
+    }
+  }
+  #midiasSociaisFooter {
+    margin: 0 auto;
+    i {
+      padding: 0px 20px;
+      color: #fff;
+      font: {
+        size: 24px;
+      }
+      &:hover {
+        cursor: pointer;
+        color: $hoverPrincipal;
+      }
+    }
+  }
+}
+
+//Responsividade do Menu em tela cheia
+@media screen and (min-width:1100px){
+	.btn-menu{
+		display: none;
+	}
+	.btn-close{
+		display: none;
+	}
+	.cabecalho{
+		background-color: #fff;
+		box-shadow: 0px 0px 3px rgba(44, 44, 44, 0.267);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+	}
+	.menu{
+		width: auto; 
+		height: 56px; 
+		line-height: 56px;
+		float: right;
+		background-color: #fff;
+		display: block !important; 
+    position: static;
+    li{
+      padding: 0; 
+      float: left;
+      a{
+        color: $corSegundaria;
+        padding: 20px;
+        font: {
+          size: 18px;
+          weight:600;
+        }
+      }
+      button{
+        color: #000;
+      }
+    }
+    
+	}
+}
+

@@ -27,7 +27,7 @@ O site ainda está em desenvolvimento;
 ---
 
 <p align= center>
-🏰 Portifólio original feito por <strong>Iuri Silva</strong>
+🏰 Portifólio original feito por <strong>Iuri Silva</strong> <br>
 🏰 Ropagem de <strong>José da  Silva</strong>
 
 </p>

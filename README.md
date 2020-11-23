@@ -28,7 +28,7 @@ O site ainda está em desenvolvimento;
 
 <p align= center>
 🏰 Portifólio original feito por <strong>Iuri Silva</strong> <br>
-🏰 Ropagem de <strong>José da  Silva</strong>
+🏰 Ropagem de <strong>José da  Silva</strong> <br>
   <a href = "https://portfoliojosesilva.netlify.app">Link</a>
 
 </p>

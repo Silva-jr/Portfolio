@@ -17,11 +17,11 @@ body.dark .cabecalho i {
   box-shadow: none;
 }
 //Dark Header
-body.dark header h2 {
+body.dark header h2, body.dark header p {
   color: $corBrancaDark;
 }
-#ola {
-  color: white;
+body.dark #ola  {
+  color: $corBrancaDark;
 }
 //Dark Sobre
 body.dark #sobre,

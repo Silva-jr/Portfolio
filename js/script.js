@@ -1,17 +1,17 @@
+
 let ola = document.getElementById('ola')
-ola.style.color='white'
- let data = new Date()
- let hora = data.getHours()
+let data = new Date()
+let hora = data.getHours()
 
- if(hora >=5 && hora < 12){
+if (hora >= 4 && hora < 12) {
 
-     ola.innerHTML = `Olá, bom dia, eu sou `
- } else if(hora >=12 && hora < 18){
-    ola.innerHTML =`Olá, boa tarde, eu sou `
-    
- } else{
-    ola.innerHTML = `Olá, boa noite, eu sou `
- }
+    ola.innerHTML = `Olá! Bom dia, eu sou`
+} else if (hora >= 12 && hora < 18) {
+    ola.innerHTML = `Olá! Boa tarde, eu sou `
+
+} else {
+    ola.innerHTML = `Olá! Boa noite, eu sou `
+}
 
 
 

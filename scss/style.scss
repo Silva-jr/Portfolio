@@ -86,9 +86,6 @@ header {
       display: none;
     }
   }
-      #ola {
-      color:  rgb(56, 56, 56);
-    }
 }
 
 //Main | Sections > Sobre mim > Projetos > Serviços > Conhecimentos
@@ -136,7 +133,6 @@ main {
     button {
       @include botao();
     }
-
   }
 
   //Projetos

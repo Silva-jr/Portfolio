@@ -10,8 +10,10 @@
     <style>
     </style>
     <!--Meu Style CSS--->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="scss/style.css" />
     <link rel="icon" href="./image/programmer.png" type="image/x-icon">
+    <script src="js/main.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   </head>
 
   <body>
@@ -53,7 +55,7 @@
         </a>
 
       </article>
-      <article id="apresentacaoFoto">
+      <article id="apresentacaoFoto" class="reveal-left">
         <img src="image/programando.png" alt="">
       </article>
     </header>
@@ -63,7 +65,7 @@
       <!--Sobre-->
       <section id="sobre">
         <section id="sobreMim">
-          <article id="sobreFoto">
+          <article id="sobreFoto" class="reveal-left">
             <img src="image/andando.png" alt="">
           </article>
           <article id="sobreTexto">
@@ -76,14 +78,46 @@
               projetos
               e aprender ainda mais sobre esse mundo do desenvolvimento.</p>
 
-            <a href="José da Silva-CV.zip" download><button>Baixar CV &nbsp; &nbsp; <i style="font-size: 30px"
+            <a href="Jose da Silva-CV.rar" download><button>Baixar CV &nbsp; &nbsp; <i style="font-size: 30px"
                   class="fa fa-download"></i>
               </button></a>
           </article>
         </section>
       </section>
 
+      <!--Projectos-->
+      <section id="projetos">
+        <h2>Projectos</h2>
+        <article class="reveal-rigth">
+          <div>
+            <a href="https://nighttrips.netlify.app/" target="_blank" rel="noopener noreferrer">
+              <h3>Night trips</h3>
+              <img src="image/nigh.png" alt="" class="imageIcone">
+            </a>
 
+
+          </div>
+          <div>
+            <a target="_blank" href="https://bose-headphones.netlify.app/">
+
+              <h3>Bose Phones</h3>
+              <img src="image/bose.png" alt="" class="imageIcone">
+            </a>
+
+
+          </div>
+          <div>
+            <a target="_blank" href="https://rachidesafio19.netlify.app/" target="_blank" rel="noopener noreferrer">
+              <h3>Rachi</h3>
+              <img src="image/racho.png" alt="" class="imageIcone">
+            </a>
+          </div>
+        </article>
+        <div class="button">
+          <a target="_blank" href="https://github.com/Silva-jr?tab=repositories">Repositórios no GitHub</a>
+        </div>
+
+      </section>
       <!--Serviços-->
       <section id="servicos">
         <h2>Serviços</h2>
@@ -203,6 +237,19 @@
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <!--Meus Scritps-->
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+    <script>
+      window.sr = ScrollReveal({
+        reset: true,
+        distance: '90px',
+        duration: 2600,
+        delay: 300,
+        wait: '1s',
+        move: '2opx'
+      });
+      sr.reveal('.reveal-left', { delay: 500, origin: 'left' });
+      sr.reveal('.reveal-rigth', { delay: 500, origin: 'rigth' });            
+    </script>
   </body>
 
 </html>

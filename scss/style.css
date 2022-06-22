@@ -451,11 +451,11 @@ main #projetos article {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  text-align: left;
+  text-align: center;
 }
 
 main #projetos article div {
-  height: 250px;
+  height: auto;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -468,49 +468,55 @@ main #projetos article div {
   -webkit-box-shadow: 0px 0px 10px #cacaca;
           box-shadow: 0px 0px 10px #cacaca;
   position: relative;
+  width: 100%;
 }
 
 main #projetos article div h3 {
   font-size: 1.4rem;
 }
 
-main #projetos article div p {
-  padding: 10px 0px;
-  font-size: 0.9rem;
+main #projetos article div img {
+  width: 90%;
 }
 
-main #projetos article div .botoes-projetos {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
+main #projetos .button {
+  text-align: center;
+  margin-top: 20px;
+  color: #0e2431;
+  font-size: 30px;
 }
 
-main #projetos article div a {
-  margin-right: 10px;
-}
-
-main #projetos article div .aovivo-button {
-  background-color: #4070f4;
-  padding: 10px 20px;
-  color: #fff;
-  border: 0;
+main #projetos .button a {
+  font-size: 1.2rem;
   font-weight: 500;
-  font-size: 14px;
-  border-radius: 5px;
-  text-transform: uppercase;
   cursor: pointer;
+  color: #4070f4;
 }
 
-main #projetos article div .github-button {
-  width: 35px;
-  height: 35px;
-  font-size: 20px;
-  border-radius: 50%;
-  background-color: #4070f4;
-  color: #fff;
-  border: 0;
-  border-radius: 50%;
-  cursor: pointer;
+main #projetos .button a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1px;
+  bottom: -7px;
+  left: 0;
+  background: -webkit-gradient(linear, right top, left top, from(#6610f2), to(#17161d));
+  background: linear-gradient(270deg, #6610f2 0%, #17161d 100%);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+main #projetos .button a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 @media screen and (max-width: 800px) {
@@ -737,6 +743,9 @@ footer #midiasSociaisFooter i:hover {
     padding: 20px;
     font-size: 18px;
     font-weight: 600;
+  }
+  .menu li a:hover {
+    color: #4070f4;
   }
   .menu li button {
     color: #000;

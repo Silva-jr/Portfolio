@@ -6,7 +6,7 @@
 Este portfólio é uma ropagem do portfólio de Iuri Silva, a quem mando um abraço pelo excelente trabalho.
 
 ## 📚 Seções
-O site é composto por 5  diferentes seções:
+O site é composto por 3  diferentes seções:
 
 - **Seção Header:** Nele temos um avatar do meu github e um breve apresentação;
 - **Seção Sobre Mim:** Nessa seção tenho um apresentação de um avatar só que andando e uma descrição dizendo sobre mim e além disso, temos botão para baixar meu currículo;

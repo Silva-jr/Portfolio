@@ -6,8 +6,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -74,31 +73,26 @@ h1 span {
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: #4070f4;
+  background-color: rgb(64, 112, 244);
   top: 0;
   left: 0;
   display: none;
 }
-
 .menu ul {
   text-align: center;
   width: 100%;
   float: left;
 }
-
 .menu li {
   padding: 3%;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
 .menu li a {
   color: #fff;
   padding: 2% 3%;
   font-size: 1.5em;
   font-weight: 600;
 }
-
 .menu li button {
   border: 0;
   margin: 0px 0px 0px 20px;
@@ -121,7 +115,7 @@ h1 span {
 
 body.dark {
   background-color: #191919;
-  color: #f8f8f8;
+  color: rgb(248, 248, 248);
 }
 
 body.dark nav,
@@ -130,151 +124,135 @@ body.dark .cabecalho,
 body.dark .cabecalho .logo,
 body.dark .cabecalho i {
   background-color: #232323;
-  color: #f8f8f8;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  color: rgb(248, 248, 248);
+  box-shadow: none;
 }
 
-body.dark header h2, body.dark header p {
-  color: #f8f8f8;
+body.dark header h2,
+body.dark header p {
+  color: rgb(248, 248, 248);
 }
 
 body.dark #ola {
-  color: #f8f8f8;
+  color: rgb(248, 248, 248);
 }
 
 body.dark #sobre,
 body.dark #servicos {
   background-color: #232323;
-  color: #f8f8f8;
+  color: rgb(248, 248, 248);
 }
 
 body.dark #sobre h3,
 body.dark #sobre p {
-  color: #f8f8f8;
+  color: rgb(248, 248, 248);
 }
 
 body.dark #projetos h2 {
-  color: #f8f8f8;
+  color: rgb(248, 248, 248);
 }
 
 body.dark #projetos div {
   background-color: #232323;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 body.dark #projetos div h3,
 body.dark #projetos div p {
-  color: #f8f8f8;
+  color: rgb(248, 248, 248);
 }
 
 body.dark #servicos div {
   background-color: #191919;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 body.dark #servicos h2,
 body.dark #servicos div p {
-  color: #f8f8f8;
+  color: rgb(248, 248, 248);
 }
 
 body.dark #meusConhecimentos article {
   background-color: #232323;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 body.dark #meusConhecimentos h2,
 body.dark #meusConhecimentos article {
-  color: #f8f8f8;
+  color: rgb(248, 248, 248);
 }
 
 body.dark footer {
   background-color: #232323;
-  color: #f8f8f8;
+  color: rgb(248, 248, 248);
+}
+
+body.dark #projetos article div {
+  border: 1px solid #232323;
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 100vh;
-  padding: 150px;
   overflow: hidden;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
-
 @media screen and (max-width: 1000px) {
   header {
     padding: 75px;
   }
 }
-
 header #apresentacaoTexto {
   width: 60%;
   padding-right: 25px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 @media screen and (max-width: 1000px) {
   header #apresentacaoTexto {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     text-align: center;
     padding-right: 0px;
   }
 }
-
 header #apresentacaoTexto h2 {
   font-size: 16px;
   font-weight: 400;
   font-line-height: 150%;
-  font-color: #383838;
+  font-color: rgb(56, 56, 56);
 }
-
-header #apresentacaoTexto h2 #nome {
-  text-transform: uppercase;
-  font-size: 2.5rem;
+header #apresentacaoTexto h2 #ola {
+  text-transform: capitalize;
+  font-size: 2rem;
   font-weight: 900;
 }
-
+header #apresentacaoTexto h2 #nome {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+header #apresentacaoTexto h2 #nome:hover {
+  color: rgb(17, 12, 65);
+}
 header #apresentacaoTexto h2 #profissao {
-  font-size: 1.06rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
 }
-
 header #apresentacaoTexto button {
   background-color: #4070f4;
   color: #fff;
   padding: 15px;
   width: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   border: none;
   margin-top: 30px;
@@ -282,55 +260,41 @@ header #apresentacaoTexto button {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
-
 header #apresentacaoTexto button:hover {
   cursor: pointer;
   background-color: #3460da;
 }
-
 header #apresentacaoTexto .midiasSociais {
   width: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 75px;
   color: #0e2431;
 }
-
 header #apresentacaoTexto .midiasSociais i {
   font-size: 24px;
 }
-
 header #apresentacaoTexto .midiasSociais i:hover {
   cursor: pointer;
   color: #091a24;
 }
-
 @media screen and (max-width: 1000px) {
   header #apresentacaoTexto .midiasSociais {
     padding: 40px 0px;
     margin: 0 auto;
   }
 }
-
 header #apresentacaoFoto {
   width: 40%;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
   position: relative;
 }
-
 header #apresentacaoFoto img {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 @media screen and (max-width: 1000px) {
   header #apresentacaoFoto {
     display: none;
@@ -341,82 +305,58 @@ main #sobre {
   padding: 50px 150px;
   background-color: #fafafa;
 }
-
 @media screen and (max-width: 1000px) {
   main #sobre {
     padding: 70px 20px;
   }
 }
-
 main #sobre #sobreMim {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  padding: 25px 0px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
-
 main #sobre #sobreFoto {
   width: 40%;
 }
-
 @media screen and (max-width: 1000px) {
   main #sobre #sobreFoto {
     display: none;
   }
 }
-
 main #sobre #sobreTexto {
   width: 60%;
   padding-left: 25px;
 }
-
 @media screen and (max-width: 1000px) {
   main #sobre #sobreTexto {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     padding-left: 0px;
     text-align: center;
     color: #0e2431;
   }
 }
-
 main #sobre #sobreTexto h3 {
   padding-bottom: 20px;
   font-size: 30px;
 }
-
 main #sobre #sobreTexto p {
   line-height: 30px;
 }
-
 main #sobre button {
   background-color: #4070f4;
   color: #fff;
   padding: 15px;
   width: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   border: none;
   margin-top: 30px;
@@ -424,129 +364,106 @@ main #sobre button {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
-
 main #sobre button:hover {
   cursor: pointer;
   background-color: #3460da;
 }
-
 main #projetos {
   padding: 70px;
 }
-
 main #projetos h2 {
   text-align: center;
   margin-top: 20px;
   color: #0e2431;
   font-size: 30px;
 }
-
 main #projetos article {
   padding: 25px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
   text-align: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
-
 main #projetos article div {
   height: auto;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
+  flex-grow: 1;
+  flex-basis: 300px;
   background-color: #fafafa;
   padding: 40px;
   margin: 10px;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 10px #cacaca;
-          box-shadow: 0px 0px 10px #cacaca;
+  box-shadow: 0px 0px 10px rgb(202, 202, 202);
   position: relative;
   width: 100%;
+  border: 1px solid #fff;
+  transition: 1s all ease;
 }
-
 main #projetos article div h3 {
   font-size: 1.4rem;
 }
-
 main #projetos article div img {
   width: 90%;
 }
-
+main #projetos article div:hover {
+  border: 1px solid #6610f2;
+}
 main #projetos .button {
   text-align: center;
   margin-top: 20px;
   color: #0e2431;
   font-size: 30px;
 }
-
 main #projetos .button a {
   font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
   color: #4070f4;
 }
-
 main #projetos .button a::after {
   content: "";
   position: absolute;
   width: 100%;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  transform: scaleX(0);
   height: 1px;
   bottom: -7px;
   left: 0;
-  background: -webkit-gradient(linear, right top, left top, from(#6610f2), to(#17161d));
   background: linear-gradient(270deg, #6610f2 0%, #17161d 100%);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  transform-origin: bottom right;
   transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
 }
-
 main #projetos .button a:hover::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
-
 @media screen and (max-width: 800px) {
   main #projetos {
     padding: 70px 10px;
   }
 }
-
 main #servicos {
   background-color: #fafafa;
   padding: 70px;
 }
-
 main #servicos h2 {
   text-align: center;
   margin-top: 20px;
   color: #0e2431;
   font-size: 30px;
 }
-
 main #servicos article {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-top: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
-
 main #servicos div {
   text-align: center;
   height: auto;
@@ -554,57 +471,52 @@ main #servicos div {
   padding: 40px;
   border-radius: 15px;
   margin: 10px;
-  -ms-flex-preferred-size: 250px;
-      flex-basis: 250px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-shadow: 0px 0px 20px #e7e7e7;
-          box-shadow: 0px 0px 20px #e7e7e7;
+  flex-basis: 250px;
+  flex-grow: 1;
+  box-shadow: 0px 0px 20px rgb(231, 231, 231);
+  border: 1px solid #fff;
+  transition: 1s all ease;
 }
-
 main #servicos div h2 {
   font-size: 20px;
   padding: 20px 0px;
 }
-
 main #servicos div p {
   line-height: 30px;
 }
-
+main #servicos div:hover {
+  cursor: pointer;
+  border: 1px solid #6610f2;
+}
 @media screen and (max-width: 800px) {
   main #servicos {
     padding: 70px 10px;
   }
 }
-
 main .imageIcone {
   width: 50px;
 }
-
 main #meusConhecimentos {
   width: 100%;
   padding: 70px;
   overflow: hidden;
 }
-
 main #meusConhecimentos h2 {
   text-align: center;
   margin-top: 20px;
   color: #0e2431;
   font-size: 30px;
 }
-
 main #meusConhecimentos div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-top: 25px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
-
 main #meusConhecimentos article {
   text-align: center;
   height: auto;
@@ -612,38 +524,28 @@ main #meusConhecimentos article {
   padding: 30px;
   border-radius: 15px;
   margin: 10px;
-  -ms-flex-preferred-size: 250px;
-      flex-basis: 250px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-shadow: 0px 0px 20px #e7e7e7;
-          box-shadow: 0px 0px 20px #e7e7e7;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  flex-basis: 250px;
+  flex-grow: 1;
+  box-shadow: 0px 0px 20px rgb(231, 231, 231);
+  border: 1px solid #fff;
+  transition: 1s all ease;
 }
-
 main #meusConhecimentos article:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  border: 1px solid #6610f2;
 }
-
 main #meusConhecimentos article h2 {
   padding: 10px 0px;
   font-size: 20px;
 }
-
 main #meusConhecimentos article p {
   line-height: 30px;
 }
-
 @media screen and (max-width: 800px) {
   main #meusConhecimentos {
     padding: 70px 10px;
   }
 }
-
 main #meusConhecimentos .estrelaConhecimento {
   background: url("../image/star.png") repeat-x;
   font-size: 0;
@@ -654,7 +556,6 @@ main #meusConhecimentos .estrelaConhecimento {
   width: 110px;
   margin: 10px auto;
 }
-
 main #meusConhecimentos .nivelConhecimento {
   background: url("../image/star.png") repeat-x;
   background-position: 0 100%;
@@ -670,12 +571,10 @@ main #meusConhecimentos .nivelConhecimento {
   background-color: #4070f4;
   padding: 14px;
   opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
   cursor: pointer;
   border-radius: 10%;
 }
-
 .scrollTop i {
   font-size: 20px;
   color: #fff;
@@ -686,24 +585,20 @@ footer {
   background-color: #0e2431;
   text-align: center;
 }
-
 footer p {
   color: #fff;
   padding: 25px;
   font-size: 14px;
   font-weight: 200;
 }
-
 footer #midiasSociaisFooter {
   margin: 0 auto;
 }
-
 footer #midiasSociaisFooter i {
   padding: 0px 20px;
   color: #fff;
   font-size: 24px;
 }
-
 footer #midiasSociaisFooter i:hover {
   cursor: pointer;
   color: #3460da;
@@ -718,8 +613,7 @@ footer #midiasSociaisFooter i:hover {
   }
   .cabecalho {
     background-color: #fff;
-    -webkit-box-shadow: 0px 0px 3px rgba(44, 44, 44, 0.267);
-            box-shadow: 0px 0px 3px rgba(44, 44, 44, 0.267);
+    box-shadow: 0px 0px 3px rgba(44, 44, 44, 0.267);
     position: fixed;
     top: 0;
     left: 0;
@@ -750,5 +644,4 @@ footer #midiasSociaisFooter i:hover {
   .menu li button {
     color: #000;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

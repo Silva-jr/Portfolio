@@ -17,10 +17,11 @@ body.dark .cabecalho i {
   box-shadow: none;
 }
 //Dark Header
-body.dark header h2, body.dark header p {
+body.dark header h2,
+body.dark header p {
   color: $corBrancaDark;
 }
-body.dark #ola  {
+body.dark #ola {
   color: $corBrancaDark;
 }
 //Dark Sobre
@@ -67,4 +68,7 @@ body.dark #meusConhecimentos article {
 body.dark footer {
   background-color: $corSegundariaDark;
   color: $corBrancaDark;
+}
+body.dark #projetos article div {
+  border: 1px solid $corSegundariaDark;
 }

@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,OAAO,CAAC,6LAAI",
-    "sources": [
-        "constants.scss"
-    ],
-    "names": [],
-    "file": "constants.css"
-}
+{"version":3,"sources":["constants.scss"],"names":[],"mappings":"AAAQ,qMAAA","file":"constants.css"}

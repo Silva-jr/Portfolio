@@ -11,8 +11,11 @@ header {
   display: flex;
   align-items: center;
   height: 100vh;
-  padding: 150px;
+  //padding: 150px;
   overflow: hidden;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
   @media screen and (max-width: 1000px) {
     padding: 75px;
   }
@@ -36,15 +39,26 @@ header {
         line-height: 150%;
         color: rgb(56, 56, 56);
       }
-      #nome {
-        text-transform: uppercase;
+      #ola {
+        text-transform: capitalize;
         font: {
-          size: 2.5rem;
+          size: 2rem;
           weight: 900;
         }
       }
+      #nome {
+        text-transform: uppercase;
+        cursor: pointer;
+        font: {
+          size: 3.5rem;
+          weight: 900;
+        }
+        &:hover {
+          color: rgb(17, 12, 65);
+        }
+      }
       #profissao {
-        font-size: 1.06rem;
+        font-size: 1.6rem;
         text-transform: uppercase;
       }
     }
@@ -91,16 +105,22 @@ header {
 //Main | Sections > Sobre mim > Projetos > Serviços > Conhecimentos
 main {
   //Sobre
+
   #sobre {
     padding: $espacamentoLaterais;
     background-color: #fafafa;
+
     @media screen and (max-width: 1000px) {
       padding: 70px 20px;
     }
     #sobreMim {
       display: flex;
-      padding: 25px 0px;
+      //padding: 25px 0px;
       align-items: center;
+      overflow: hidden;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
     }
     #sobreFoto {
       width: $tamanhoArticlesMenor;
@@ -147,6 +167,10 @@ main {
       justify-content: space-between;
       flex-wrap: wrap;
       text-align: center;
+      overflow: hidden;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
       div {
         height: auto;
         flex-grow: 1;
@@ -158,11 +182,16 @@ main {
         box-shadow: 0px 0px 10px rgb(202, 202, 202);
         position: relative;
         width: 100%;
+        border: 1px solid $borderColor;
+        transition: 1s all ease;
         h3 {
           font-size: 1.4rem;
         }
         img {
           width: 90%;
+        }
+        &:hover {
+          border: 1px solid #6610f2;
         }
       }
     }
@@ -184,12 +213,12 @@ main {
           background: linear-gradient(270deg, #6610f2 0%, #17161d 100%);
           transform-origin: bottom right;
           transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
-        }        
+        }
       }
       a:hover::after {
-          transform: scaleX(1);
-          transform-origin: bottom left;
-        }
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
     }
 
     //reponsividade no flexbox
@@ -210,6 +239,10 @@ main {
       height: auto;
       flex-wrap: wrap;
       margin-top: 20px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
     }
     div {
       text-align: center;
@@ -221,12 +254,18 @@ main {
       flex-basis: 250px;
       flex-grow: 1;
       box-shadow: 0px 0px 20px rgb(231, 231, 231);
+      border: 1px solid $borderColor;
+      transition: 1s all ease;
       h2 {
         font-size: 20px;
         padding: 20px 0px;
       }
       p {
         line-height: 30px;
+      }
+      &:hover {
+        cursor: pointer;
+        border: 1px solid #6610f2;
       }
     }
     //reponsividade no flexbox
@@ -250,6 +289,10 @@ main {
       height: auto;
       flex-wrap: wrap;
       margin-top: 25px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
     }
     article {
       text-align: center;
@@ -261,10 +304,12 @@ main {
       flex-basis: 250px;
       flex-grow: 1;
       box-shadow: 0px 0px 20px rgb(231, 231, 231);
-      transition: all 0.5s;
+      border: 1px solid $borderColor;
+      transition: 1s all ease;
+
       &:hover {
         cursor: pointer;
-        transform: scale(1.05);
+        border: 1px solid #6610f2;
       }
       h2 {
         padding: 10px 0px;

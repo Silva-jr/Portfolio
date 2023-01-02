@@ -2,8 +2,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -29,5 +28,4 @@ h6 {
 body {
   font-family: "Montserrat", sans-serif;
   color: #0e2431;
-}
-/*# sourceMappingURL=zero_config.css.map */
+}/*# sourceMappingURL=zero_config.css.map */
